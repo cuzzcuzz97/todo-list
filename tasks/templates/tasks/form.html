@@ -1,0 +1,17 @@
+<!-- <div>
+    <ul>
+        {% for task in tasks %}
+        <li style="list-style-type: none"> {{task.title}}
+            <a href="delete/{{task.id}}">delete</a>
+            <a href="delete/{{task.id}}">update</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div> -->
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="title"><br>
+    <input type="text" name="detail" placeholder="detail"><br>
+    <input type=submit value="Submit">
+</form>
+

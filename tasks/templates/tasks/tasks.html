@@ -1,0 +1,18 @@
+{% extends 'tasks/layout.html' %}
+
+{% block body %}
+<h1>Tasks Display Here</h1>
+<div>
+    <ul>
+        {% for task in tasks %}
+        <li>{{task.title}}
+            <a href="form/delete/{{task.id}}">delete</a>
+            <!-- <a href="#">Complete</a> -->
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'addtasks' %}">Add Task</a>
+</div>
+
+
+{% endblock %}
