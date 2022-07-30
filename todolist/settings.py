@@ -51,6 +51,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://todolist-vn.herokuapp.com']
+
+
 ROOT_URLCONF = 'todolist.urls'
 
 TEMPLATES = [
