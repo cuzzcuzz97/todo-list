@@ -6,10 +6,15 @@
     <ul>
         {% for task in tasks %}
         <li>
-            <input type="checkbox" id="{{task.id}}">
-            <label for="">{{task.title}}</label>
-            <a href="form/delete/{{task.id}}">delete</a>
-            <a href="form/{{task.id}}/update">Update</a>
+            <div class="text-field">
+                {{task.created_at|date:"D f"}}
+                <input type="checkbox" id="{{task.id}}">
+                <label for="">{{task.title}}</label>
+            </div>
+            <div class="button-field">
+                <a href="form/delete/{{task.id}}">Delete</a> 
+                <a href="form/{{task.id}}/update">Update</a>
+            </div>
         </li>
         {% endfor %}
     </ul>
