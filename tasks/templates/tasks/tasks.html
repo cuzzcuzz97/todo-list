@@ -7,7 +7,7 @@
         {% for task in tasks %}
         <li>
             <div class="text-field">
-                {{task.created_at|date:"D f"}}
+                <a href="form/complete/{{task.id}}">{{task.created_at|date:"D f"}}</a>
                 <input type="checkbox" id="{{task.id}}" onchange="this.checked = !this.checked" {% if task.complete %}checked{% endif %}>
 
                 <label for="">{{task.title}}</label>

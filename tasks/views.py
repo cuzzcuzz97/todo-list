@@ -34,6 +34,16 @@ def delete(request, id):
     task.delete()
     return HttpResponseRedirect(reverse('tasks'))
 
+def complete(request, id):
+    task = TaskList.objects.get(id=id)
+    if task.complete == True:
+        task.complete = False
+        task.save()
+    else:
+        task.complete = True
+        task.save()
+    return HttpResponseRedirect(reverse('tasks'))
+
 def update(request, id):
     task = TaskList.objects.get(id=id)
     if request.method == 'POST':
