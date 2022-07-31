@@ -8,12 +8,12 @@
         <li>
             <div class="text-field">
                 {{task.created_at|date:"D f"}}
-                <input type="checkbox" id="{{task.id}}" {% if task.complete %}checked{% endif %}>
+                <input type="checkbox" id="{{task.id}}" onchange="this.checked = !this.checked" {% if task.complete %}checked{% endif %}>
 
                 <label for="">{{task.title}}</label>
             </div>
             <div class="button-field">
-                <a href="form/delete/{{task.id}}">Delete</a> 
+                <a href="form/delete/{{task.id}}" onclick="return DeleteTask()">Delete</a> 
                 <a href="form/{{task.id}}/update">Update</a>
             </div>
         </li>
