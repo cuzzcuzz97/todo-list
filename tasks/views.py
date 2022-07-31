@@ -3,6 +3,8 @@ from .models import TaskList
 from django.http import HttpResponse , HttpResponseRedirect
 from .forms import TasksForm
 from django.urls import reverse
+from django.shortcuts import redirect
+
 # Create your views here.
 
 # def index(request):
@@ -31,3 +33,15 @@ def delete(request, id):
     task = TaskList.objects.get(id=id)
     task.delete()
     return HttpResponseRedirect(reverse('tasks'))
+
+def update(request, id):
+    task = TaskList.objects.get(id=id)
+    if request.method == 'POST':
+        form = TasksForm(request.POST, instance=task)
+        if form.is_valid():
+            form.save()
+            return redirect('tasks')
+    else:
+        form = TasksForm(instance=task)
+
+    return render(request, 'tasks/update.html', {'form': form})

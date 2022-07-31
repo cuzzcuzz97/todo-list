@@ -1,0 +1,9 @@
+.task-list li {
+list-style-type:none;
+}
+
+.task-list input[type="checkbox"],
+.task-list input[type="checkbox"]:checked + label {
+	opacity: .8;
+	text-decoration: line-through;
+}

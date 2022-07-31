@@ -2,12 +2,14 @@
 
 {% block body %}
 <h1>Tasks Display Here</h1>
-<div>
+<div class="task-list">
     <ul>
         {% for task in tasks %}
-        <li>{{task.title}}
+        <li>
+            <input type="checkbox" id="{{task.id}}">
+            <label for="">{{task.title}}</label>
             <a href="form/delete/{{task.id}}">delete</a>
-            <!-- <a href="#">Complete</a> -->
+            <a href="form/{{task.id}}/update">Update</a>
         </li>
         {% endfor %}
     </ul>
