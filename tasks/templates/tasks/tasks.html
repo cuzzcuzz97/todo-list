@@ -8,7 +8,8 @@
         <li>
             <div class="text-field">
                 {{task.created_at|date:"D f"}}
-                <input type="checkbox" id="{{task.id}}">
+                <input type="checkbox" id="{{task.id}}" {% if task.complete %}checked{% endif %}>
+
                 <label for="">{{task.title}}</label>
             </div>
             <div class="button-field">
