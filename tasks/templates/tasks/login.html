@@ -1,4 +1,10 @@
+{% extends 'tasks/layout.html' %}
+
+{% block body %}
+
+
 <h2>Log In</h2>
+
 {% for message in messages %}
     {% if message.error %}<h3>{{ message }}</h3>{% endif %}
 {% endfor %}
@@ -11,3 +17,4 @@
 <a href = "{% url 'signup' %}">Sign up here</a>
 
 
+{% endblock %}
