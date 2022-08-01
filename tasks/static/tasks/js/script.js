@@ -8,4 +8,7 @@ function DeleteTask() {
     }
   }
 
-
+function Complete(clicked_id) { 
+  $(clicked_id).load(window.location.href=("form/complete/"+clicked_id))
+  // window.location.href=("form/complete/"+clicked_id)
+}

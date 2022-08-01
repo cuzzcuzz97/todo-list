@@ -15,7 +15,8 @@
         <li>
             <div class="text-field">
                 {{task.created_at|date:"D f"}}
-                <input type="checkbox" onclick="window.location.href='form/complete/{{task.id}}'" id="{{task.id}}" {% if task.complete %}checked{% endif %}>
+                <!-- <input type="checkbox" onclick="window.location.href='form/complete/{{task.id}}'" id="{{task.id}}" {% if task.complete %}checked{% endif %}> -->
+                <input type="checkbox" onclick="Complete(this.id)" id="{{task.id}}" {% if task.complete %}checked{% endif %}>
 
                 <label for="">{{task.title}}</label>
             </div>
