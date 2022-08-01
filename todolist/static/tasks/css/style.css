@@ -1,0 +1,25 @@
+.task-list li{
+    width: 50%;
+    list-style-type:none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-list input[type="checkbox"],
+.task-list input[type="checkbox"]:checked + label {
+	opacity: .8;
+	text-decoration: line-through;
+    color: green;
+}
+
+.task-list a {
+    /* text-decoration: none;
+    color: black;
+    font-weight: bold;     */
+}
+
+.task-list a:hover {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;    
+}
