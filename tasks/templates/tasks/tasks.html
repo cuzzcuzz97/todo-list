@@ -1,6 +1,9 @@
 {% extends 'tasks/layout.html' %}
 
 {% block body %}
+
+<div class="tasks-container">
+
 {% if user.is_authenticated %}<h1>Welcome , {{user}} </h1>
 <a href="{% url 'logout' %}">Logout</a>
 {% else %}
@@ -30,6 +33,7 @@
     <a href="{% url 'addtasks' %}">Add Task</a>
 </div>
 {% endif %}
+</div>
 
 
 

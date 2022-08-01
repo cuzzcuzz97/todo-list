@@ -1,5 +1,4 @@
 .task-list li{
-    width: 50%;
     list-style-type:none;
     display: flex;
     justify-content: space-between;
@@ -22,4 +21,20 @@
     text-decoration: none;
     color: red;
     font-weight: bold;    
+}
+
+.tasks-container {
+    text-align: center;
+    width: 60%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 2px solid black;
+
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
 }
