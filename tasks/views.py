@@ -33,7 +33,6 @@ def formtasks(request):
     if not request.user.is_authenticated:
         return redirect(tasks)
     context = {}
-    # tasklist = TaskList.objects.all()
     form = TasksForm(request.POST or None)
     if form.is_valid():
         form.instance.user = request.user
@@ -41,7 +40,6 @@ def formtasks(request):
         return HttpResponseRedirect(reverse('tasks'))
 
     return render(request, 'tasks/form.html', {'form' : form,
-    # 'tasks':  tasklist
     })
 
 def delete(request, id):
