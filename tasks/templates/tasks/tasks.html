@@ -1,7 +1,14 @@
 {% extends 'tasks/layout.html' %}
 
 {% block body %}
+{% if user.is_authenticated %}<h1>Welcome , {{user}} </h1>
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+    <a href="{% url 'login'%}"><h1>Login</h1></a>
+{%endif%}
+
 <h1>Tasks Display Here</h1>
+{% if request.user.is_authenticated %}
 <div class="task-list">
     <ul>
         {% for task in tasks %}
@@ -21,6 +28,8 @@
     </ul>
     <a href="{% url 'addtasks' %}">Add Task</a>
 </div>
+{% endif %}
+
 
 
 {% endblock %}

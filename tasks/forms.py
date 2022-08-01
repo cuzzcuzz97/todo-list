@@ -10,3 +10,4 @@ class TasksForm(forms.ModelForm):
     class Meta:
         model = TaskList
         fields = '__all__'
+        exclude = ('user',)

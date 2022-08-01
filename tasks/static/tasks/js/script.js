@@ -8,3 +8,4 @@ function DeleteTask() {
     }
   }
 
+document.getElementById('login').reset();
