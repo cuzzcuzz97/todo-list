@@ -1,0 +1,10 @@
+{% extends 'tasks/layout.html' %}
+
+{% block content %}
+{% for task in tasks %}
+<p>{{ task.detail }}</p>
+<p>{{ task.title }}</p>
+{% endfor %}
+
+
+{% endblock content %}

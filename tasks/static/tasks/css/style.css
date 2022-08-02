@@ -2,19 +2,24 @@
     list-style-type:none;
     display: flex;
     justify-content: space-between;
+    padding-top: 30px;
+    background-color: bisque;
+    margin: 5px;
+    box-shadow: 5px 10px #888888;
+
 }
 
 .task-list input[type="checkbox"],
-.task-list input[type="checkbox"]:checked + label {
+.task-list input[type="checkbox"]:checked + a {
 	opacity: .8;
-	text-decoration: line-through;
+	text-decoration: line-through !important;
     color: green;
 }
 
 .task-list a {
-    /* text-decoration: none;
+    text-decoration: none;
     color: black;
-    font-weight: bold;     */
+    font-weight: bold;    
 }
 
 .task-list a:hover {

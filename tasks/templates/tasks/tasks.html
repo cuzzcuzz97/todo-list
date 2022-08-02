@@ -21,11 +21,11 @@
                 <!-- <input type="checkbox" onclick="window.location.href='form/complete/{{task.id}}'" id="{{task.id}}" {% if task.complete %}checked{% endif %}> -->
                 <input type="checkbox" onclick="Complete(this.id)" id="{{task.id}}" {% if task.complete %}checked{% endif %}>
 
-                <label for="">{{task.title}}</label>
+                <a href="form/{{task.id}}/update"><label for="">{{task.title}}</label></a>
             </div>
             <div class="button-field">
                 <a href="form/delete/{{task.id}}" onclick="return DeleteTask()">Delete</a> 
-                <a href="form/{{task.id}}/update">Update</a>
+                <!-- <a href="form/{{task.id}}/update">Update</a> -->
             </div>
         </li>
         {% endfor %}
