@@ -4,11 +4,19 @@
 
 <form method ='post'>
     {% csrf_token %}
-    {{form.as_p}}
+    <ul>
+    <li><label for="id_username">Username:</label><br>
+        <input type="text" id="id_username" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required="" id="id_username">
+    </li>
+    <li><label for="id_password1">Password:</label><br>
+    <input type="password" id="id_password1" required="" name="password1"></li>
+    <li><label for="id_password2">Confirm your password:</label><br>
+    <input type="password" id="id_password1" required="" name="password2"></li><br>
     <input type="submit" value = "Submit">
+    </ul>
 </form>
  
-<h3>Already Have an Account??</h3>
+<h3>Already have an account?</h3>
 <a href = "{% url 'login' %}">Sign In Here</a>
 
 {% endblock %}

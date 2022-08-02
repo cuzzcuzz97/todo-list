@@ -48,4 +48,20 @@ body {
     letter-spacing: 0.02em;
     font-weight: 400;
     -webkit-font-smoothing: antialiased; 
+    list-style-type: none;
 }
+
+
+@media only screen and (max-width: 500px) {
+    body {
+      width:100%;
+      margin: 0;
+      font-size: larger;
+    }
+    .tasks-container {
+        width: 100%;
+        padding: 0;
+        height:50vh;
+        border: none;
+    }
+  }
