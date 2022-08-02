@@ -52,7 +52,7 @@ body {
 }
 
 
-@media only screen and (max-width: 900px) {
+@media (min-width:600px) {
     body {
       width:100%;
       margin: 0;
@@ -61,7 +61,7 @@ body {
     .tasks-container {
         width: 100%;
         padding: 0;
-        height:50vh;
+        height:500px;
         border: none;
 
     }
