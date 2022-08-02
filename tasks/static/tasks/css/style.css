@@ -56,7 +56,7 @@ body {
     body {
       width:100%;
       margin: 0;
-      font-size: larger;
+      font-size: 2rem;
     }
     .tasks-container {
         width: 100%;
