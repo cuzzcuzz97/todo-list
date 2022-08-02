@@ -52,7 +52,7 @@ body {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     body {
       width:100%;
       margin: 0;
@@ -63,5 +63,9 @@ body {
         padding: 0;
         height:50vh;
         border: none;
+
+    }
+    .tasks-container li {
+        padding: 30px 10px;
     }
   }
