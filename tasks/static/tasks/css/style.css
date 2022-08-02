@@ -56,7 +56,10 @@ body {
     body {
       width:100%;
       margin: 0;
-      font-size: 2rem;
+      font-size: 1.5rem;
+      background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
     }
     .tasks-container {
         width: 100%;
@@ -69,3 +72,6 @@ body {
         padding: 30px 10px;
     }
   }
+
+
+  
